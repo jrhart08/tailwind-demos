@@ -26,6 +26,23 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer base {
+  html {
+    /* --success: 0 255 0;
+    --info: 0 0 255;
+    --error: 255 0 0; */
+    --success: from #00ff00 r g b;
+    --info: from #0000ff r g b;
+    --error: from #ff0000 r g b;
+  }
+
+  html[data-theme="improving"] {
+    --success: 64 192 128;
+    --info: 64 128 192;
+    --error: 192 128 64;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
