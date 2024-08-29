@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,10 +24,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 @layer base {
-  html {
+  :root {
     /* --success: 0 255 0;
     --info: 0 0 255;
     --error: 255 0 0; */
@@ -36,7 +36,7 @@ body {
     --error: from #ff0000 r g b;
   }
 
-  html[data-theme="improving"] {
+  [data-theme="improving"] {
     --success: 64 192 128;
     --info: 64 128 192;
     --error: 192 128 64;

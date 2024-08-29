@@ -1,6 +1,15 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";
 
 const config: Config = {
+  plugins: [
+    daisyui,
+  ],
+  daisyui: {
+    prefix: 'dui-', // default: ""
+    base: false, // default: true (applies background/foreground color)
+    darkTheme: 'turn off dark theme'
+  },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +17,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       colors: {
         pal: {
           // Same colors found in MUI theme (src\components\Layout\theme\palette.theme.ts)
@@ -47,6 +59,5 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
 };
 export default config;
