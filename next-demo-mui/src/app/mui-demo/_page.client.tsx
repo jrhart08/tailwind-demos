@@ -7,15 +7,18 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
-import { DemoPageBody, DemoPageHeader } from "./styles";
+import { DemoPageBody, DemoPageHeader, Credit, Quote } from "./styles";
 
 interface Props {
   title: string;
 }
 
 export default function MuiDemoClientPage({
-  title
+  title,
 }: Props) {
+  const quote = `"CSS? I can't even spell it"`;
+  const credits = 'Joseph Hart';
+
   return (
     <div>
       <DemoPageHeader>
@@ -24,6 +27,12 @@ export default function MuiDemoClientPage({
         </Typography>
       </DemoPageHeader>
       <DemoPageBody>
+        <Quote>
+          {quote}
+        </Quote>
+        <Credit>
+          {credits}
+        </Credit>
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
